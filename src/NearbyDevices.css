@@ -1,0 +1,35 @@
+.nearby-screen { min-height: 768px; }
+.nearby-content { padding: 48px; }
+.nearby-toolbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; }
+.nearby-title-group { display: flex; flex-direction: column; gap: 8px; }
+.nearby-title-group h1 { margin: 0; color: #111827; font-size: 28px; font-weight: 700; line-height: normal; }
+.nearby-title-group p { margin: 0; color: #4B5563; font-size: 14px; line-height: normal; }
+.back-link, .refresh-button, .try-refresh, .device-select { border: 0; font-size: 14px; font-weight: 600; cursor: pointer; }
+.back-link { width: fit-content; padding: 0; display: flex; align-items: center; gap: 6px; color: #4B5563; background: transparent; }
+.back-link svg, .refresh-button svg, .try-refresh svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.refresh-button { padding: 10px 16px; display: flex; align-items: center; gap: 8px; border: 1px solid #E5E7EB; border-radius: 6px; background: #FFFFFF; color: #111827; }
+.refresh-button.refreshing svg { animation: spin .8s linear infinite; }
+.refresh-button:disabled { cursor: wait; opacity: .7; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.devices-content { margin-top: 32px; }
+.devices-heading h2 { margin: 0 0 16px; color: #111827; font-size: 18px; font-weight: 700; }
+.device-list { width: 100%; max-width: 720px; display: flex; flex-direction: column; gap: 12px; }
+.device-row { min-height: 82px; padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border: 1px solid #E5E7EB; border-radius: 8px; background: #FFFFFF; transition: border-color .15s ease, box-shadow .15s ease; }
+.device-row:hover, .device-row.selected { border-color: #10B981; box-shadow: 0 4px 12px rgba(16, 185, 129, .08); }
+.device-row.selected { border-width: 1.5px; }
+.device-info { display: flex; align-items: center; gap: 16px; min-width: 0; }
+.device-icon { width: 40px; height: 40px; flex: 0 0 40px; display: grid; place-items: center; border-radius: 6px; background: #E5E7EB; color: #4B5563; }
+.device-icon.institutional { background: #E0F2FE; color: #0284C7; }
+.device-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.device-info h2 { margin: 0 0 6px; overflow: hidden; color: #111827; font-size: 16px; font-weight: 700; line-height: normal; text-overflow: ellipsis; white-space: nowrap; }
+.device-info p { margin: 0; display: flex; align-items: center; gap: 6px; color: #4B5563; font-size: 13px; line-height: normal; }
+.device-info p span { width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: #10B981; }
+.device-select { padding: 8px 16px; border: 1px solid #E5E7EB; border-radius: 6px; background: #FFFFFF; color: #111827; }
+.device-row.selected .device-select { border-color: #10B981; background: #10B981; color: #FFFFFF; }
+.empty-state { width: 100%; max-width: 512px; min-height: 291px; padding: 48px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; border: 1px solid #E5E7EB; border-radius: 12px; background: #FFFFFF; text-align: center; }
+.empty-icon { width: 56px; height: 56px; display: grid; place-items: center; border: 1px solid #E5E7EB; border-radius: 50%; background: #F9FAFB; color: #4B5563; }
+.empty-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.empty-state h2 { margin: 0; color: #111827; font-size: 18px; font-weight: 700; }
+.empty-state p { margin: 0; color: #4B5563; font-size: 14px; line-height: 21px; }
+.try-refresh { display: flex; align-items: center; gap: 8px; padding: 0; background: transparent; color: #10B981; }
+@media (max-width: 720px) { .nearby-content { padding: 32px 24px; }.nearby-toolbar { flex-direction: column; }.refresh-button { align-self: flex-start; }.device-row { padding: 20px 16px; }.device-info { gap: 12px; }.device-select { padding: 8px 12px; }.empty-state { padding: 32px 24px; } }
